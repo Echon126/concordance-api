@@ -12,12 +12,14 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
  *
  * <b>@create: 2019-08-21 14:14
  **/
+
 public interface EmployeeRepository extends ElasticsearchRepository<Employee, String> {
-    /**
+/**
      * 查询雇员信息
      *
      * @param id
      * @return
      */
+
     Employee queryEmployeeById(String id);
 }

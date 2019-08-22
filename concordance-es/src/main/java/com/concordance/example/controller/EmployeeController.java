@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * <b>@create: 2019-08-21 14:17
  **/
+
 @RestController
 @RequestMapping("/es")
 public class EmployeeController {
@@ -46,19 +47,8 @@ public class EmployeeController {
         return accountInfo;
     }
 
-    public void aggregationQuery() {
-        BoolQueryBuilder builder = QueryBuilders.boolQuery();
-        builder.must(QueryBuilders.fuzzyQuery("id", "1"));
-        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
-        nativeSearchQueryBuilder.withQuery(builder);
-        NativeSearchQuery query = nativeSearchQueryBuilder.build();
-        Page<Employee> page = repository.search(query);
-        System.out.println(page.getTotalPages());
-        System.out.println(page.getContent());
-
-    }
-
 }
+
 
 
 

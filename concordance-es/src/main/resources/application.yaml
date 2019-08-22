@@ -9,10 +9,10 @@ spring:
       repositories:
         enabled: true
       #设置连接超时
-      properties:
-        transport:
-          tcp:
-            connect_timeout: 120s
+#      properties:
+#        transport:
+#          tcp:
+#            connect_timeout: 120s
 
 # 端口设置
 server:

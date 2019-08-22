@@ -14,6 +14,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
  *
  * <b>@create: 2019-08-21 14:07
  **/
+
 @Data
 @Document(indexName = "company", type = "employee", shards = 1, replicas = 0, refreshInterval = "-1")
 public class Employee {
