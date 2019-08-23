@@ -3,6 +3,8 @@ package com.concordance.example.data;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import java.util.Date;
+
 /**
  * 西安中科天塔科技股份有限公司
  * Copyright (c) 2018-2028, tianta All Rights Reserved.<br/>
@@ -21,5 +23,7 @@ public class Employee {
     private String lastName;
     private Integer age = 0;
     private String about;
-
+    private Date time;
+    private String address;
+    private String nan;
 }
