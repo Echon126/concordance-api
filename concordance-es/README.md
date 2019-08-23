@@ -9,3 +9,6 @@ String indexStoreType() default "fs";//索引文件存储类型
 
 
 https://www.cnblogs.com/cjsblog/p/9459781.html
+
+
+### springboot集成ElasticSearch 注意事项
