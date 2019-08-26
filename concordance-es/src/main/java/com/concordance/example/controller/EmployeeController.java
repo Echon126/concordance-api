@@ -1,7 +1,9 @@
 package com.concordance.example.controller;
 
 import com.concordance.example.data.Employee;
+import com.concordance.example.data.User;
 import com.concordance.example.repository.EmployeeRepository;
+import com.concordance.example.repository.UserRepostory;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,20 +27,19 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository repository;
 
+    @Autowired
+    private UserRepostory userRepostory;
+
 
     @RequestMapping("/save")
     public String add() {
-        Employee employee;
+        User user;
         for (int i = 0; i < 1000; i++) {
-            employee = new Employee();
-            employee.setId("1"+i+i);
-            employee.setFirstName("张三"+i);
-            employee.setAge(10+i);
-            employee.setTime(new Date());
-            employee.setAddress("西安"+i);
-            employee.setAbout("ass");
-            employee.setNan("sdfsdfsdfsdfsd");
-            this.repository.save(employee);
+            user = new User();
+            user.setId("1"+i);
+            user.setUserName("李四"+i);
+            user.setXxxMessage("message info ....");
+            this.userRepostory.save(user);
             System.out.println("=========end==========");
 
         }

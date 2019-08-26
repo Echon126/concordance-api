@@ -21,7 +21,7 @@ public class Employee {
     private String id;
     private String firstName;
     private String lastName;
-    private Integer age = 0;
+    private Integer age;
     private String about;
     private Date time;
     private String address;
