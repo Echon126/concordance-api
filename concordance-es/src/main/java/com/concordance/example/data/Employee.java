@@ -23,7 +23,7 @@ public class Employee {
     private String lastName;
     private Integer age;
     private String about;
-    private Date time;
+    private long time;
     private String address;
     private String nan;
 }

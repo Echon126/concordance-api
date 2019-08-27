@@ -22,4 +22,6 @@ public interface EmployeeRepository extends ElasticsearchRepository<Employee, St
      */
 
     Employee queryEmployeeById(String id);
+
+    long countByLastName(String id);
 }
